@@ -32,7 +32,11 @@
     </h2>
     <h3>Project Specifications</h3>
     <a href = "https://colab.research.google.com/drive/18361XbcuYKNmzIZykcWl63NNpZMO1M4P?usp=sharing">Link to colab notebook</a>
-    <p class = "webInfo">This project focuses on preparing and processing a dataset of vehicle images containing license plates for use in machine learning models. It includes converting raw image and annotation data into the TensorFlow TFRecord format, parsing and decoding the serialized data, and building an efficient input pipeline using the tf.data API. Additional utilities are provided for visualizing bounding boxes and license plate text, enabling effective inspection of the data prior to training object detection or OCR models. 
+    <p class = "webInfo">This project is centered around preparing a dataset of vehicle images containing license plates for use in machine learning workflows, particularly for tasks like object detection and optical character recognition (OCR). The pipeline begins by converting raw images and their corresponding annotations—such as bounding box coordinates and license plate characters—into the optimized TensorFlow TFRecord format. These records are then efficiently written to disk in shards to support scalable training.
+
+The next phase involves parsing and decoding the serialized TFRecord data using the tf.data API to construct a high-performance input pipeline. This pipeline supports parallel reads, shuffling, batching, and prefetching to ensure smooth and fast training.
+
+Additionally, utility functions are included to decode license plate characters, scale bounding boxes, and visually display labeled images. These tools provide an intuitive way to inspect and validate the dataset before feeding it into a machine learning model.
     </p>
     <h3>Project implementations</h3>
     <p class = "webInfo">Dataset prefetching with the Tensorflow Dataset API, MatLab parser to extract bounding box coordinates, Data augmentation, Custom Callback functions, import pre-trained model, Pre-training, Fine-tuning</p>
